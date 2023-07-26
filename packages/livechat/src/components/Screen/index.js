@@ -1,4 +1,4 @@
-import { useEffect } from 'preact/hooks';
+import { useInsertionEffect } from 'preact/hooks';
 
 import ChatIcon from '../../icons/chat.svg';
 import CloseIcon from '../../icons/close.svg';
@@ -38,7 +38,7 @@ const ChatButton = ({ text, minimized, badge, onClick, triggered = false, agent 
 );
 
 const CssVar = ({ theme }) => {
-	useEffect(() => {
+	useInsertionEffect(() => {
 		if (window.CSS && CSS.supports('color', 'var(--color)')) {
 			return;
 		}
