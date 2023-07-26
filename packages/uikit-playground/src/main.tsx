@@ -1,16 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import '@rocket.chat/icons/dist/rocketchat.css';
 
 import './index.css';
 import App from './App';
 import { Provider } from './Context';
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
     <Provider>
       <App />
     </Provider>
-  </React.StrictMode>,
-  document.getElementById('root'),
+  </React.StrictMode>
 );
