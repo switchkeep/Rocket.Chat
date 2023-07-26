@@ -8,7 +8,7 @@ var content = module.exports.content;
 module.exports = function (props) {
 	var ref = hooks.useRef();
 
-	hooks.useEffect(function () {
+	hooks.useInsertionEffect(function () {
 		var div = document.createElement('div');
 		div.innerHTML = '<svg>' + content + '</svg>';
 
