@@ -1,5 +1,5 @@
 import React, { StrictMode } from 'react';
-import { render } from 'react-dom';
+import { createRoot } from 'react-dom/client';
 
 import AppRoot from '../views/root/AppRoot';
 
@@ -16,10 +16,10 @@ const createContainer = (): Element => {
 };
 
 const container = createContainer();
+const root = createRoot(container);
 
-render(
+root.render(
 	<StrictMode>
 		<AppRoot />
-	</StrictMode>,
-	container,
+	</StrictMode>
 );
